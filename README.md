@@ -36,7 +36,7 @@ Esta app é uma PWA, isso significa que quando você carregar este site, o seu n
 
 ### Atualizando a página
 
-Uma vez que você carregar esta página, ela será portanto "instalada" para você. Para que você possa atualizar a experiência caso algo mude, você deve ignorar o service worker em modo local, ou acessar a rota `/update` para que o service worker atual seja automaticamente descartado, forçando o browser a atualizar os sources baixados.
+Uma vez que você carregar esta página, ela será portanto "instalada" para você. Para que você possa atualizar a experiência caso algo mude, você deve ignorar o service worker em modo local, ou acessar a página `/update.html` para que o service worker atual seja automaticamente descartado, forçando o browser a atualizar os sources baixados.
 
 ## Serverless & Static
 
@@ -164,9 +164,11 @@ python -m http.server
 
 Ou o que você quiser. Após isso abra seu endereço local e você verá a app. Atualize sua posts.json e pronto, a app responderá.
 
-## /update
+## /update.html
 
-Lembre-se: isso é uma PWA, uma vez carregada ela não muda mais. Para atualizar o estado da aplicação, desative o sw.js ou acesse a rota /update.
+Lembre-se: isso é uma PWA, uma vez carregada ela não muda mais. Para atualizar o estado da aplicação, desative o sw.js ou acesse a página `/update.html`.
+
+Esse caminho aponta diretamente para o arquivo estático e funciona sem configuração de reescrita de URLs no servidor.
 
 ## Deployment
 
